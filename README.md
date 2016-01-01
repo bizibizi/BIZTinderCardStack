@@ -5,7 +5,7 @@
 ![alt tag](https://github.com/bizibizi/BIZTinderCardStack/blob/master/presentation.gif)
 
 
-BIZTinderCardStack is a stack of cards simular to Tinder app's stack.  That stack could be moved by gestures, by click. Every card could have overlay.
+BIZTinderCardStack is a stack of cards simular to Tinder app's stack. That stack could be moved by gesture or by click. Every card could have overlay.
 
 
 # Installation
@@ -16,12 +16,12 @@ BIZTinderCardStack is a stack of cards simular to Tinder app's stack.  That stac
 
 # Usage
 
-- Create and setup your custom class for ```CardView``` with XIB, inherit that from ```DraggableCardView```
+- create and setup your custom class for ```CardView``` with XIB, inherit that from ```DraggableCardView```
 ```objective-c
 @interface CardView : DraggableCardView <UIGestureRecognizerDelegate>
 @end
 ```
-- For using moving by click add events to controls in your custom ```CardView``` class
+- For moving by click add events to controls in your custom ```CardView``` class
 ```objective-c
 - (void)setup
 {
@@ -35,6 +35,64 @@ BIZTinderCardStack is a stack of cards simular to Tinder app's stack.  That stac
     UITapGestureRecognizer *tapRejectImageViewGesture = [[UITapGestureRecognizer alloc]initWithTarget:self action:@selector(leftButtonAction)];
     tapRejectImageViewGesture.cancelsTouchesInView = NO;
     [self.rejectImageView addGestureRecognizer:tapRejectImageViewGesture];
+}
+```
+
+- in subclass of your UIViewController create outlet that will be present placeholder view for initial position of cards. On it's place  the stack of cards will be placed.
+```objective-c
+@interface ViewController ()  
+@property (weak, nonatomic) IBOutlet UIView *cardViewPlaceholder;
+@end
+```
+
+- in subclass of your UIViewController create stack of the cards 
+```objective-c
+@interface ViewController () <DraggableCardViewDelegate>
+@property (weak, nonatomic) IBOutlet UIView *cardViewPlaceholder;
+@property (nonatomic, strong) NSMutableArray *cardViews; // of CardViews
+@end
+
+- (void)viewDidLoad
+{
+    [super viewDidLoad];
+    
+    self.cardViews = [NSMutableArray array];
+    self.cardViewPlaceholder.hidden = YES;
+    [self initCardViews];
+}
+
+- (void)viewDidAppear:(BOOL)animated
+{
+    [super viewDidAppear:animated];
+    
+    [self layoutCardViews];
+}
+
+- (void)initCardViews
+{
+    for (NSUInteger i = 0; i < 20; i++)
+    {
+        CardView *cardView = [[[NSBundle mainBundle] loadNibNamed:@"CardView" owner:self options:nil] firstObject];
+        cardView.frame = self.cardViewPlaceholder.frame;
+        cardView.delegateOfDragging = self;
+        cardView.rightOverlayImage = [UIImage imageNamed:@"no.jpg"];
+        cardView.leftOverlayImage = [UIImage imageNamed:@"yes.png"];
+        cardView.titleLabel.text = [NSString stringWithFormat:@"#%lu", (unsigned long)i+1];
+        [self.cardViews addObject:cardView];
+    }
+    
+    for (CardView *cardView in self.cardViews.reverseObjectEnumerator)
+    {
+        [self.view addSubview:cardView];
+    }
+}
+
+- (void)layoutCardViews
+{
+    for (CardView *i in self.cardViews)
+    {
+        i.frame = self.cardViewPlaceholder.frame;
+    }
 }
 ```
 
