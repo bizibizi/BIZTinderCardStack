@@ -38,7 +38,6 @@
     UITapGestureRecognizer *tapRejectImageViewGesture = [[UITapGestureRecognizer alloc]initWithTarget:self action:@selector(leftButtonAction)];
     tapRejectImageViewGesture.cancelsTouchesInView = NO;
     [self.rejectImageView addGestureRecognizer:tapRejectImageViewGesture];
-
 }
 
 

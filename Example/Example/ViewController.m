@@ -28,6 +28,7 @@
     [super viewDidLoad];
     
     self.cardViews = [NSMutableArray array];
+    self.cardViewPlaceholder.hidden = YES;
     [self initCardViews];
 }
 
@@ -45,8 +46,8 @@
         CardView *cardView = [[[NSBundle mainBundle] loadNibNamed:@"CardView" owner:self options:nil] firstObject];
         cardView.frame = self.cardViewPlaceholder.frame;
         cardView.delegateOfDragging = self;
-        cardView.rightOverlayImage = [UIImage imageNamed:@"yes.png"];
-        cardView.leftOverlayImage = [UIImage imageNamed:@"no.jpg"];
+        cardView.rightOverlayImage = [UIImage imageNamed:@"no.jpg"];
+        cardView.leftOverlayImage = [UIImage imageNamed:@"yes.png"];
         cardView.titleLabel.text = [NSString stringWithFormat:@"#%lu", (unsigned long)i+1];
         [self.cardViews addObject:cardView];
     }
