@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="8191" systemVersion="15A284" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8154"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="NearbyPeopleListViewController"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="CardView">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="483"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <imageView contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="no-sign" translatesAutoresizingMaskIntoConstraints="NO" id="IN3-NU-d9Q">
+                    <rect key="frame" x="8" y="8" width="41" height="49"/>
+                    <animations/>
+                    <color key="backgroundColor" red="0.86274509799999999" green="0.15686274510000001" blue="0.21176470589999999" alpha="1" colorSpace="calibratedRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="49" id="0BJ-bn-kvy"/>
+                        <constraint firstAttribute="width" constant="41" id="PtD-i9-YiC"/>
+                    </constraints>
+                </imageView>
+                <imageView contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="yes-sign" translatesAutoresizingMaskIntoConstraints="NO" id="QOq-Pp-OGJ">
+                    <rect key="frame" x="326" y="8" width="41" height="49"/>
+                    <animations/>
+                    <color key="backgroundColor" red="0.0" green="0.85490196080000003" blue="0.5450980392" alpha="1" colorSpace="calibratedRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="41" id="63L-6W-PUU"/>
+                        <constraint firstAttribute="height" constant="49" id="AWF-PQ-Sja"/>
+                    </constraints>
+                </imageView>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="text" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Tsd-bm-wsu">
+                    <rect key="frame" x="173" y="231" width="29" height="21"/>
+                    <animations/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+            </subviews>
+            <animations/>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstItem="IN3-NU-d9Q" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="8" id="Atd-7Y-8tY"/>
+                <constraint firstItem="IN3-NU-d9Q" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="8" id="FWJ-Pd-RaP"/>
+                <constraint firstItem="QOq-Pp-OGJ" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="8" id="Fo5-Sy-gfj"/>
+                <constraint firstAttribute="trailing" secondItem="QOq-Pp-OGJ" secondAttribute="trailing" constant="8" id="OIN-my-fys"/>
+                <constraint firstItem="Tsd-bm-wsu" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="jMy-Mp-n1q"/>
+                <constraint firstItem="Tsd-bm-wsu" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="m2z-OB-NAs"/>
+            </constraints>
+            <nil key="simulatedStatusBarMetrics"/>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <connections>
+                <outlet property="approveImageView" destination="QOq-Pp-OGJ" id="PoD-T2-UEv"/>
+                <outlet property="rejectImageView" destination="IN3-NU-d9Q" id="rgw-yS-tyh"/>
+                <outlet property="titleLabel" destination="Tsd-bm-wsu" id="hYk-Lz-wtP"/>
+            </connections>
+            <point key="canvasLocation" x="602.5" y="228.5"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="no-sign" width="199" height="200"/>
+        <image name="yes-sign" width="200" height="200"/>
+    </resources>
+</document>
