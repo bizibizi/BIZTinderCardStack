@@ -11,7 +11,12 @@ BIZTinderCardStack is a stack of cards simular to Tinder app's stack. That stack
 # Installation
 
 ### Manually
- - Copy BIZTinderCardStack folder to your project 
+- Copy ```Classes``` folder to your project 
+
+### From CocoaPods:
+```objective-c
+pod 'BIZTinderCardStack' 
+```
 
 
 # Usage
