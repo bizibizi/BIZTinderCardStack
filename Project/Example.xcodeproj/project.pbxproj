@@ -13,10 +13,10 @@
 		7E2237061C219941008DB11A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7E2237041C219941008DB11A /* Main.storyboard */; };
 		7E2237081C219941008DB11A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7E2237071C219941008DB11A /* Assets.xcassets */; };
 		7E22370B1C219941008DB11A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7E2237091C219941008DB11A /* LaunchScreen.storyboard */; };
-		7E2D1C931C259F2C0025FD0D /* DraggableCardView.m in Sources */ = {isa = PBXBuildFile; fileRef = 7E2D1C901C259F2C0025FD0D /* DraggableCardView.m */; settings = {ASSET_TAGS = (); }; };
-		7E2D1C941C259F2C0025FD0D /* OverlayView.m in Sources */ = {isa = PBXBuildFile; fileRef = 7E2D1C921C259F2C0025FD0D /* OverlayView.m */; settings = {ASSET_TAGS = (); }; };
 		7E2D1C981C259F4A0025FD0D /* CardView.m in Sources */ = {isa = PBXBuildFile; fileRef = 7E2D1C961C259F4A0025FD0D /* CardView.m */; settings = {ASSET_TAGS = (); }; };
 		7E2D1C991C259F4A0025FD0D /* CardView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7E2D1C971C259F4A0025FD0D /* CardView.xib */; settings = {ASSET_TAGS = (); }; };
+		7E9FD15A1C3B6AC0008801FF /* DraggableCardView.m in Sources */ = {isa = PBXBuildFile; fileRef = 7E9FD1571C3B6AC0008801FF /* DraggableCardView.m */; settings = {ASSET_TAGS = (); }; };
+		7E9FD15B1C3B6AC0008801FF /* OverlayView.m in Sources */ = {isa = PBXBuildFile; fileRef = 7E9FD1591C3B6AC0008801FF /* OverlayView.m */; settings = {ASSET_TAGS = (); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,13 +30,13 @@
 		7E2237071C219941008DB11A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		7E22370A1C219941008DB11A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		7E22370C1C219941008DB11A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		7E2D1C8F1C259F2C0025FD0D /* DraggableCardView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DraggableCardView.h; sourceTree = "<group>"; };
-		7E2D1C901C259F2C0025FD0D /* DraggableCardView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DraggableCardView.m; sourceTree = "<group>"; };
-		7E2D1C911C259F2C0025FD0D /* OverlayView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OverlayView.h; sourceTree = "<group>"; };
-		7E2D1C921C259F2C0025FD0D /* OverlayView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OverlayView.m; sourceTree = "<group>"; };
 		7E2D1C951C259F4A0025FD0D /* CardView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CardView.h; sourceTree = "<group>"; };
 		7E2D1C961C259F4A0025FD0D /* CardView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CardView.m; sourceTree = "<group>"; };
 		7E2D1C971C259F4A0025FD0D /* CardView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CardView.xib; sourceTree = "<group>"; };
+		7E9FD1561C3B6AC0008801FF /* DraggableCardView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DraggableCardView.h; sourceTree = "<group>"; };
+		7E9FD1571C3B6AC0008801FF /* DraggableCardView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DraggableCardView.m; sourceTree = "<group>"; };
+		7E9FD1581C3B6AC0008801FF /* OverlayView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OverlayView.h; sourceTree = "<group>"; };
+		7E9FD1591C3B6AC0008801FF /* OverlayView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OverlayView.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -53,7 +53,7 @@
 		7E2236EF1C219941008DB11A = {
 			isa = PBXGroup;
 			children = (
-				7E2D1C8E1C259F2C0025FD0D /* BIZTinderCardStack */,
+				7E9FD1551C3B6AC0008801FF /* Classes */,
 				7E2236FA1C219941008DB11A /* Example */,
 				7E2236F91C219941008DB11A /* Products */,
 			);
@@ -94,16 +94,16 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
-		7E2D1C8E1C259F2C0025FD0D /* BIZTinderCardStack */ = {
+		7E9FD1551C3B6AC0008801FF /* Classes */ = {
 			isa = PBXGroup;
 			children = (
-				7E2D1C8F1C259F2C0025FD0D /* DraggableCardView.h */,
-				7E2D1C901C259F2C0025FD0D /* DraggableCardView.m */,
-				7E2D1C911C259F2C0025FD0D /* OverlayView.h */,
-				7E2D1C921C259F2C0025FD0D /* OverlayView.m */,
+				7E9FD1561C3B6AC0008801FF /* DraggableCardView.h */,
+				7E9FD1571C3B6AC0008801FF /* DraggableCardView.m */,
+				7E9FD1581C3B6AC0008801FF /* OverlayView.h */,
+				7E9FD1591C3B6AC0008801FF /* OverlayView.m */,
 			);
-			name = BIZTinderCardStack;
-			path = ../BIZTinderCardStack;
+			name = Classes;
+			path = ../Classes;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -178,9 +178,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				7E2D1C981C259F4A0025FD0D /* CardView.m in Sources */,
-				7E2D1C931C259F2C0025FD0D /* DraggableCardView.m in Sources */,
-				7E2D1C941C259F2C0025FD0D /* OverlayView.m in Sources */,
+				7E9FD15B1C3B6AC0008801FF /* OverlayView.m in Sources */,
 				7E2237031C219941008DB11A /* ViewController.m in Sources */,
+				7E9FD15A1C3B6AC0008801FF /* DraggableCardView.m in Sources */,
 				7E2237001C219941008DB11A /* AppDelegate.m in Sources */,
 				7E2236FD1C219941008DB11A /* main.m in Sources */,
 			);
